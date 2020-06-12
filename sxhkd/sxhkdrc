@@ -65,36 +65,12 @@ super + r
 super + Return
 			alacritty
 super + d
-			rofi --config ~/.config/rofi/config -show drun -theme ~/.config/rofi/dracula.rasi
-super + s
-			rofi --config ~/.config/rofi/config -show run -theme ~/.config/rofi/dracula.rasi
-super + e
-			rofimoji --rofi-args "-theme ~/.config/rofi/dracula.rasi"
+			rofi -show drun 
+super + 
+			rofi -show run
 alt + Tab
 			rofi -show window -theme ~/.config/rofi/dracula.rasi
-super + c
-			rofi -show calc -modi calc -no-show-match -no-sor -theme ~/.config/rofi/dracula.rasi
-super + x
-			betterlockscreen -l dim -t
-super + shift + x
-	  		systemctl suspend
-super + w
-			alacritty -e newsboat
-super + grave 
-	tdrop -ma -y 18 --wm "bspwm" alacritty
-
-
 Print
     scrot ~/Pictures/Screenshots/%Y-%m-%d-%T-screenshot.png
 
 
-#poe related
-
-F3
-    poe_logout
-
-XF86AudioMute
-    pulsemixer --id source-2  --toggle-mute
-
-super + F3
-    java -jar /home/oleg/Programms/cadiro.jar -l Hardcore//Delirium

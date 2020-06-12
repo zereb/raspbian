@@ -1,0 +1,2 @@
+in /boot/config.txt add hdmi_enableoverscan=1
+in /etc/initab comment 1:2345:respawn:/sbin/getty 115200 tty1 and add 1:2345:respawn:/bin/login -f pi tty1 </dev/tty1 >/dev/tty1 2>&1
