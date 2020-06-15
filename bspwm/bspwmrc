@@ -1,6 +1,6 @@
 #! /bin/bash
 #### AUTOSTART ####
-
+sh /home/pi/raspbian/autostart
 
 #### MONITORS ####
 

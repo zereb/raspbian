@@ -61,16 +61,19 @@ XF86AudioLowerVolume
 super + b
 			qutebrowser
 super + r
-			kitty -e ranger
+			xfce4-terminal -e ranger
 super + Return
-			alacritty
+			xfce4-terminal
 super + d
 			rofi -show drun 
-super + 
+super + s 
 			rofi -show run
 alt + Tab
-			rofi -show window -theme ~/.config/rofi/dracula.rasi
+			rofi -show window 
 Print
     scrot ~/Pictures/Screenshots/%Y-%m-%d-%T-screenshot.png
+
+
+
 
 
