@@ -1,0 +1,13 @@
+[Unit]
+Description=Java server
+
+[Service]
+WorkingDirectory=/home/pi/
+ExecStart=/bin/java -Xms128m -Xmx256m -jar holoprism-1.0-SNAPSHOT.jar
+User=pi
+Type=simple
+Restart=on-failure
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target

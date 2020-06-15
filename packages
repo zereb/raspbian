@@ -1,4 +1,4 @@
-#! /usr/bin/sh
+#!/bin/sh
 
 sudo apt install xorg xinit bspwm sxhkd ranger mpv tigervnc rofi xfce4-terminal neovim pure-ftpd
 
