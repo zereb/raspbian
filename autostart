@@ -1,3 +1,6 @@
 #!/bin/bash
-
+xrandr --output HDMI-1 --rotate normal --reflect x
 mpv --fs --osc=no --loop-playlist=yes ~/play/*
+java -jar holoprism-1.0-SNAPSHOT.jar &
+
+#TODO: wifi connect, screen configuration, ssh, bootstrap 
