@@ -1,6 +1,6 @@
 #!/bin/bash
 #xrandr --output HDMI-1 --rotate normal --reflect x
 java -jar /home/pi/holoprism-1.0-SNAPSHOT.jar &
-mpv --fs --osc=no --loop-playlist=yes ~/play/* --input-ipc-server=/tmp/mpvsocket
+mpv --fs --osc=no --loop-playlist=yes ~/play/* --input-ipc-server=/tmp/mpvsocket --idle=yes
 
 #TODO: wifi connect, screen configuration, ssh, bootstrap 

@@ -27,14 +27,14 @@ if [ -d "$HOME/.local/bin" ] ; then
 fi
 
 
-export EDITOR=nvim
+  export EDITOR=nvim
+  export TERM=ansi
+
 if [[ ! $DISPLAY && $XDG_VTNR -eq 1 ]]; then
   exec startx
 fi
 
-if systemctl -q is-active graphical.target && [[ ! $DISPLAY && $XDG_VTNR -eq 1 ]]; then
-    exec startx
-fi
+i
 
 
 
