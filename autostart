@@ -1,6 +1,16 @@
 #!/bin/bash
-#xrandr --output HDMI-1 --rotate normal --reflect x
-java -jar /home/pi/holoprism-1.0-SNAPSHOT.jar &
-mpv --fs --osc=no --loop-playlist=yes ~/play/* --input-ipc-server=/tmp/mpvsocket --idle=yes
+monitors= xrandr | grep connected | wc -l
+echo $monitors
+if [ $monitors -eq 1] ; then
+	echo "only 1 monitor connected"
+	sleep 4
+fi
 
-#TODO: wifi connect, screen configuration, ssh, bootstrap 
+mpv --fs --osc=no --loop-playlist=yes  --input-ipc-server=/tmp/mpvsocket --idle=yes &
+exec &> /home/pi/main.log
+java -jar /home/pi/holoprism-1.0-SNAPSHOT.jar -email EvolutionGlobal21@yandex.ru -ehost smtp.yandex.ru -epass 123 -eport 456 &
+sleep 5
+/home/pi/jre/bin/java -jar /home/pi/holoprism-1.0-SNAPSHOT.jar -fx true 
+xinput --map-to-output 9 HDMI-1
+
+
