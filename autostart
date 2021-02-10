@@ -1,9 +1,11 @@
 #!/bin/bash
-monitors= xrandr | grep connected | wc -l
+monitors=$(xrandr | grep connected | wc -l)
 echo $monitors
-if [ $monitors -eq 1] ; then
+
+if [ $monitors == 1] ; then
 	echo "only 1 monitor connected"
 	sleep 4
+	reboot -n
 fi
 
 mpv --fs --osc=no --loop-playlist=yes  --input-ipc-server=/tmp/mpvsocket --idle=yes &
