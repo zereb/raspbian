@@ -1,18 +1,19 @@
 #!/bin/bash
 monitors=$(xrandr | grep connected | wc -l)
 echo $monitors
-
-if [ $monitors == 1] ; then
+if [ $monitors == 1 ] ; then
 	echo "only 1 monitor connected"
 	sleep 4
 	reboot -n
 fi
 
-mpv --fs --osc=no --loop-playlist=yes  --input-ipc-server=/tmp/mpvsocket --idle=yes &
+#mpv --fs --osc=no --loop-playlist=yes  --input-ipc-server=/tmp/mpvsocket --idle=yes &
 exec &> /home/pi/main.log
-java -jar /home/pi/holoprism-1.0-SNAPSHOT.jar -email zizereb@yandex.ru -ehost smtp.yandex.ru -epass hetymgsxoxasghqb -eport 465 &
+java -jar /home/pi/holoprism-1.0-SNAPSHOT.jar -email moybussines@yandex.ru -ehost smtp.yandex.ru -epass fkkzrslyomgwcheg -eport 465 &
 sleep 5
-/home/pi/jre/bin/java -jar -Dcom.sun.javafx.virtualKeyboard=javafx  /home/pi/holoprism-1.0-SNAPSHOT.jar -fx true &
+ /home/pi/jre/bin/java -jar -Dcom.sun.javafx.virtualKeyboard=javafx  /home/pi/holoprism-1.0-SNAPSHOT.jar -fx true &
+#xrandr --output HDMI-1 --mode 1280x720
+xrandr --output HDMI-1 --left-of HDMI-2
 xinput -map-to-output 1 HDMI-1
 xinput -map-to-output 2 HDMI-1
 xinput -map-to-output 3 HDMI-1
