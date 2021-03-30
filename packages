@@ -1,16 +1,10 @@
 #!/bin/sh
 
-sudo apt install xorg xinit bspwm sxhkd ranger mpv tigervnc rofi xfce4-terminal neovim pure-ftpd
+sudo apt install xorg xinit bspwm sxhkd ranger mpv rofi xfce4-terminal neovim
 
 update-alternatives --install /usr/bin/python python /usr/bin/python3 1
 
-sudo useradd ftpuser -g ftpgroup -s /sbin/nologin -d /dev/null
 sudo mkdir /home/pi/video
-sudo chown -R ftpuser:ftpgroup /home/pi/video/
-sudo pure-pw useradd upload -u ftpuser -g ftpgroup -d /home/pi/video -m
-sudo pure-pw mkdb
-sudo ln -s /etc/pure-ftpd/conf/PureDB /etc/pure-ftpd/auth/60puredb
-sudo service pure-ftpd restart
 
 
 

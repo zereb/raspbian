@@ -26,4 +26,7 @@ xinput -map-to-output 9 HDMI-1
 xinput -map-to-output 10 HDMI-1
 xinput -map-to-output 11 HDMI-1
 
-
+xset -dpms
+xset s off
+sleep 8h
+reboot -n
